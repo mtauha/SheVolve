@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Thrive Together
+  datasource:
+    url: jdbc:mysql://localhost:3306/thriveDB
+    username: root
+    password: MySQL@28
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    jdbc:
+      dialect: mysql
+  servlet:
+    multipart:
+      max-file-size: 30MB
+logging:
+  file:
+    name: ./logs/logs.log
+
+gcp:
+  bucket:
+    name: shevolve-bucket
+  credentials:
+    path: ./config/project-credentials.json

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #d35400;
+    --background-color: #f3e5f5;
+    --text-color: #333;
+    --card-bg: #fff;
+
+}
+
+/* Modal background overlay */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Header styling */
+model-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Label styling for form inputs */
+model-content label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+/* Input and textarea styles */
+model-content input[type="text"],
+model-content input[type="number"],
+model-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+*/
+
+/* Save button */
+.saveButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Cancel button */
+.cancelButton {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    model-content {
+        width: 90%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #d35400;
+    --background-color: #f3e5f5;
+    --text-color: #333;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --hover-color: #9b59b6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.ngo-requests-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ngo-requests-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.ngo-requests-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ngo-requests-tabs {
+    margin-top: 1rem;
+}
+
+.requests-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.request-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ngo-requests-tabs [data-state="active"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.ngo-requests-tabs [data-state="active"]:hover {
+    background-color: var(--hover-color);
+}
+
+.ngo-requests-tabs button {
+    transition: background-color 0.3s ease;
+}
+
+.ngo-requests-tabs button:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .ngo-requests-content {
+        padding: 1rem;
+    }
+
+    .requests-grid {
+        grid-template-columns: 1fr;
+    }
+}

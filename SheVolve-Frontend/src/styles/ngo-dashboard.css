@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #d35400;
+    --background-color: #f3e5f5;
+    --text-color: #333;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --hover-color: #9b59b6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.ngo-dashboard {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ngo-dashboard-content {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.welcome-card {
+    margin-bottom: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-grid .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.dashboard-grid .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-grid .card-title {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.dashboard-grid .card-content {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.dashboard-grid .card-content p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .ngo-dashboard-content {
+        padding: 1rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dashboard-grid .card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

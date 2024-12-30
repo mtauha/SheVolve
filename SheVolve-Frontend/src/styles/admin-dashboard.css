@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #d35400;
+    --background-color: #f3e5f5;
+    --text-color: #333;
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --hover-color: #9b59b6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.admin-dashboard {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-main {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.admin-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.admin-welcome-card {
+    margin-bottom: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-welcome-card h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-welcome-card p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.admin-profile-card,
+.admin-quick-actions {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.admin-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.admin-profile-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.admin-profile-info p {
+    margin: 0.25rem 0;
+}
+
+.admin-role {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.admin-quick-actions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-quick-actions li {
+    margin-bottom: 1rem;
+}
+
+.admin-quick-actions a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.admin-quick-actions a:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.admin-quick-actions svg {
+    color: var(--primary-color);
+}
+
+.admin-quick-actions a:hover svg {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-content>* {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.admin-content>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.admin-content>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
